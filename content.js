@@ -1,14 +1,5 @@
 // Content script - runs in isolated context
 // Inject the script into the page context to access Three.js objects
-(function() {
-  const script = document.createElement('script');
-  script.src = chrome.runtime.getURL('injected.js');
-  script.onload = function() {
-    this.remove();
-  };
-  (document.head || document.documentElement).appendChild(script);
-})();
-
 // Listen for messages from the injected script
 window.addEventListener('message', function(event) {
   // Only accept messages from the same window

@@ -4,8 +4,7 @@
     "version": "1.0.0",
     "description": "Download Three.js meshes from web pages as OBJ files",
     "permissions": [
-        "activeTab",
-        "scripting"
+        "activeTab"
     ],
     "action": {
         "default_popup": "popup.html",
@@ -21,12 +20,12 @@
             "matches": ["<all_urls>"],
             "js": ["content.js"],
             "run_at": "document_start"
-        }
-    ],
-    "web_accessible_resources": [
+        },
         {
-            "resources": ["injected.js"],
-            "matches": ["<all_urls>"]
+            "matches": ["<all_urls>"],
+            "js": ["injected.js"],
+            "run_at": "document_start",
+            "world": "MAIN"
         }
     ],
     "icons": {
