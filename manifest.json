@@ -5,8 +5,7 @@
     "description": "Download Three.js meshes from web pages as OBJ files",
     "permissions": [
         "activeTab",
-        "scripting",
-        "downloads"
+        "scripting"
     ],
     "action": {
         "default_popup": "popup.html",
